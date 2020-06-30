@@ -4,7 +4,7 @@ class Pages extends BaseController
 {
     public function index()
     {
-        echo 'hi';
+        return view('pages/home');
     }
 
     public function showme($page = 'home')
