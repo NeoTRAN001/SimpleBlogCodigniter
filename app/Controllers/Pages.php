@@ -4,11 +4,21 @@ class Pages extends BaseController
 {
     public function index()
     {
-        return view('pages/home');
+        echo view('templates/header');
+        echo view('pages/home');
+        echo view('templates/footer');
     }
 
     public function showme($page = 'home')
     {
-        echo 'This page is: '.$page;
+        if(!is_file(APPPATH.'/Views/pages/'.$page.'.php'))
+        {
+            // Whoops, we don´t have a pag for that!
+            throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
+        }
+
+        echo view('templates/header');
+        echo view('pages/'.$page);
+        echo view('templates/footer');
     } 
 }
