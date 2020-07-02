@@ -7,3 +7,15 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 </section>
+
+<section class="blog-section">
+    <div class="container">
+        <?php   if ($news):
+                    foreach ($news as $newsItem): ?>
+                        <h3><?= $newsItem['title'] ?></h3>
+        <?php       endforeach;
+                else: ?>
+                    <p class="text-center">No posts have been found</p>
+        <?php   endif; ?>
+    </div>
+</section>
