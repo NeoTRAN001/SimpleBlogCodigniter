@@ -24,7 +24,7 @@
     <div class="container">
         <?php   if ($news):
                     foreach ($news as $newsItem): ?>
-                        <h3><?= $newsItem['title'] ?></h3>
+                        <h3><a href="/Blog/public/blog/<?= $newsItem['slug'] ?>"> <?= $newsItem['title'] ?> </a></h3>
         <?php       endforeach;
                 else: ?>
                     <p class="text-center">No posts have been found</p>
