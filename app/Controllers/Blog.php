@@ -6,7 +6,11 @@ class Blog extends BaseController
 {
     public function post($slug)
     {
-        echo view('templates/header');
+        $model = new BlogModel();
+
+        $data['post'] = $model->getPosts($slug);
+
+        echo view('templates/header', $data);
         echo view('blog/post');
         echo view('templates/footer');
     }
