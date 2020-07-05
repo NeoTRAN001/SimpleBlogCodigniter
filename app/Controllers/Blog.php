@@ -32,6 +32,9 @@ class Blog extends BaseController
                     ]
                 );
 
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'New Post Was Created');
+
             return redirect()->to('/Blog/public');
         }
     }

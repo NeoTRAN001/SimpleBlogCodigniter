@@ -21,8 +21,11 @@ class Pages extends BaseController
             // Whoops, we don´t have a pag for that!
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
         }
+        
+        $model = new BlogModel();
+        $data['news'] = $model->getPosts();
 
-        echo view('templates/header');
+        echo view('templates/header', $data);
         echo view('pages/'.$page);
         echo view('templates/footer');
     } 

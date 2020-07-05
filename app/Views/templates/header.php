@@ -16,12 +16,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                    <li class="nav-item active">
                         <a class="nav-link" href="/Blog/public/home">Home</a>
                    </li>
                    <li class="nav-item active">
                         <a class="nav-link" href="/Blog/public/about">About</a>
+                   </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-success" href="/Blog/public/blog/create">Create Post</a>
                    </li>
                 </ul>
             </div>

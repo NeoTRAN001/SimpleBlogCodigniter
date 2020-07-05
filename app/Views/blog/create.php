@@ -1,5 +1,10 @@
 <div class="container">
     <h1>Create new Post</h1>
+
+    <?php if($_POST): ?>
+    <?= \Config\Services::validation()->listErrors(); ?>
+    <?php endif; ?>
+
     <form class="" action="/Blog/public/blog/create" method="post">
         <div class="form-group">
             <label for="title"><strong>Title</strong></label>
